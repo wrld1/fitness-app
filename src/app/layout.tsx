@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import "./globals.css";
 import { ukUA } from "@clerk/localizations";
+import ToasterProvider from "@/components/providers/toaster-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,6 +44,7 @@ export default function RootLayout({
           <SignedIn>
             <UserButton />
           </SignedIn> */}
+          <ToasterProvider />
           {children}
         </body>
       </html>
