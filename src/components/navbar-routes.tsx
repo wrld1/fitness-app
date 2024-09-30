@@ -9,7 +9,7 @@ import Link from "next/link";
 function NavbarRoutes() {
   const pathname = usePathname();
 
-  const isTeacherPage = pathname?.startsWith("/teacher");
+  const isTeacherPage = pathname?.startsWith("/dashboard/teacher");
   const isPlayerPage = pathname?.includes("/chapter");
 
   return (
@@ -22,7 +22,7 @@ function NavbarRoutes() {
           </Button>
         </Link>
       ) : (
-        <Link href="/teacher/courses">
+        <Link href="/dashboard/teacher/courses">
           <Button className="font-semibold" size="sm" variant="ghost">
             Режим вчителя
           </Button>

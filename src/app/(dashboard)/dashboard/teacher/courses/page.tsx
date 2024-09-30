@@ -4,7 +4,7 @@ import Link from "next/link";
 function CoursesPage() {
   return (
     <div className="p-6">
-      <Link href="/teacher/create">
+      <Link href="/dashboard/teacher/create">
         <Button>Новий курс</Button>
       </Link>
     </div>

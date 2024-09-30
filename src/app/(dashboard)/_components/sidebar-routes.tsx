@@ -13,7 +13,7 @@ const guestRoutes = [
   {
     icon: Compass,
     label: "Всі курси",
-    href: "/search",
+    href: "/dashboard/search",
   },
 ];
 
@@ -21,12 +21,12 @@ const teacherRoutes = [
   {
     icon: List,
     label: "Курси",
-    href: "/teacher/courses",
+    href: "/dashboard/teacher/courses",
   },
   {
     icon: BarChart,
     label: "Аналітика",
-    href: "/teacher/analytics",
+    href: "/dashboard/teacher/analytics",
   },
 ];
 
