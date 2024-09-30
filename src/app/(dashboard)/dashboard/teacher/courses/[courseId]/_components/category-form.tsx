@@ -3,7 +3,6 @@
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-
 import { Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -19,19 +18,20 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Textarea } from "@/components/ui/textarea";
 import { Course } from "@prisma/client";
+import { Combobox } from "@/components/ui/combobox";
 
-interface DescriptionFormProps {
+interface CategoryFormProps {
   initialData: Course;
   courseId: string;
+  options: { label: string; value: string }[];
 }
 
 const formSchema = z.object({
-  description: z.string().min(1, { message: "Опис обов'язковий" }),
+  categoryId: z.string().min(1),
 });
 
-function DescriptionForm({ initialData, courseId }: DescriptionFormProps) {
+function CategoryForm({ initialData, courseId, options }: CategoryFormProps) {
   const [isEditing, setIsEditing] = useState(false);
   const router = useRouter();
 
@@ -40,7 +40,7 @@ function DescriptionForm({ initialData, courseId }: DescriptionFormProps) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      description: initialData?.description || "",
+      categoryId: initialData?.categoryId || "",
     },
   });
 
@@ -57,17 +57,21 @@ function DescriptionForm({ initialData, courseId }: DescriptionFormProps) {
     }
   };
 
+  const selectedOption = options.find(
+    (option) => option.value === initialData.categoryId
+  );
+
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
-        Опис курсу
+        Категорія курсу
         <Button onClick={toggleEdit} variant="ghost" className="font-semibold">
           {isEditing ? (
             <>Відмінити</>
           ) : (
             <>
               <Pencil className="h-4 w-4 mr-2" />
-              Редагувати опис
+              Редагувати категорію
             </>
           )}
         </Button>
@@ -76,10 +80,10 @@ function DescriptionForm({ initialData, courseId }: DescriptionFormProps) {
         <p
           className={cn(
             "text-sm mt-2",
-            !initialData.description && "text-slate-500 italic"
+            !initialData.categoryId && "text-slate-500 italic"
           )}
         >
-          {initialData.description || "Немає опису"}
+          {selectedOption?.label || "Немає категорії"}
         </p>
       )}
       {isEditing && (
@@ -90,15 +94,11 @@ function DescriptionForm({ initialData, courseId }: DescriptionFormProps) {
           >
             <FormField
               control={form.control}
-              name="description"
+              name="categoryId"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Textarea
-                      disabled={isSubmitting}
-                      placeholder="e.g. 'Цей курс про ...'"
-                      {...field}
-                    />
+                    <Combobox options={options} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -116,4 +116,4 @@ function DescriptionForm({ initialData, courseId }: DescriptionFormProps) {
   );
 }
 
-export default DescriptionForm;
+export default CategoryForm;
