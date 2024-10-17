@@ -12,9 +12,14 @@ interface SidebarItemsProps {
 
 function SidebarItem({ href, label, icon: Icon }: SidebarItemsProps) {
   const pathname = usePathname();
+  console.log(pathname);
   const router = useRouter();
+  console.log("href", href);
 
-  const isActive = pathname === href || pathname?.startsWith(`${href}/`);
+  const isActive =
+    pathname === href ||
+    (pathname.startsWith(href) &&
+      pathname.split("/").length === href.split("/").length);
 
   const onClick = () => {
     router.push(href);
