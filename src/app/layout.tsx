@@ -7,6 +7,7 @@ import "./globals.css";
 import { ukUA } from "@clerk/localizations";
 import ToasterProvider from "@/components/providers/toaster-provider";
 import { ourFileRouter } from "./api/uploadthing/core";
+import { ConfettiProvider } from "@/components/providers/confetti-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,6 +43,7 @@ export default function RootLayout({
           <SignedIn>
             <UserButton />
           </SignedIn> */}
+          <ConfettiProvider />
           <ToasterProvider />
           {children}
         </body>

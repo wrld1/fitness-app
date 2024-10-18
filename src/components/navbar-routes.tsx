@@ -22,7 +22,7 @@ function NavbarRoutes() {
   }
 
   const isTeacherPage = pathname?.startsWith("/dashboard/teacher");
-  const isPlayerPage = pathname?.includes("/chapter");
+  const isPlayerPage = pathname?.includes("/courses");
   const isSearchPage = pathname === "/dashboard/search";
 
   return (
