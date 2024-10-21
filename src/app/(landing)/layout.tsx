@@ -16,7 +16,9 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="flex flex-col items-center justify-center -mt-[88px]">
+        {children}
+      </main>
       <footer></footer>
     </>
   );
