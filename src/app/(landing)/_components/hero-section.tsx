@@ -1,7 +1,7 @@
+import BlurFade from "@/components/ui/blur-fade";
+import { Button } from "@/components/ui/button";
+import { FadeText } from "@/components/ui/fade-text";
 import Image from "next/image";
-import { FadeText } from "./ui/fade-text";
-import { Button } from "./ui/button";
-import BlurFade from "./ui/blur-fade";
 
 function HeroSection() {
   return (

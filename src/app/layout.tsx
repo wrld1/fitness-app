@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <ClerkProvider afterSignOutUrl="/" localization={ukUA}>
       <html lang="en" className={notoSerif.className}>
-        <body>
+        <body className="min-h-screen">
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           {/* <SignedOut>
             <SignInButton />
