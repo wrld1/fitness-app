@@ -1,55 +1,54 @@
 import BlurFade from "@/components/ui/blur-fade";
+import BoxReveal from "@/components/ui/box-reveal";
 import { Button } from "@/components/ui/button";
-import { FadeText } from "@/components/ui/fade-text";
 import Image from "next/image";
 
 function HeroSection() {
   return (
-    <div className="container flex items-center justify-between h-screen">
-      <div className="flex flex-col items-center justify-around h-full flex-1">
-        <div className="grid grid-cols-4 grid-rows-4 gap-4 font-normal">
-          <div className="col-start-1 row-start-1 text-center">
-            <FadeText
-              className="text-4xl  "
-              direction="up"
-              framerProps={{
-                show: { transition: { delay: 0.2 } },
-              }}
-              text="Струнка"
-            />
+    <div className="container flex items-center justify-between min-h-screen">
+      <div className="size-full max-w-lg items-start flex flex-col justify-center overflow-hidden pt-8">
+        <BoxReveal boxColor={"#94BFF0"} duration={0.5}>
+          <h1 className="text-[3.5rem] font-semibold">
+            Найкращі курси з фітнесу<span className="text-[#94BFF0]">.</span>
+          </h1>
+        </BoxReveal>
+
+        <BoxReveal boxColor={"#94BFF0"} duration={0.5}>
+          <p className="mt-[.5rem] text-[1rem]">
+            Стань кращою версією <span className="text-[#94BFF0]">себе</span>
+          </p>
+        </BoxReveal>
+
+        <BoxReveal boxColor={"#94BFF0"} duration={0.5}>
+          <div className="mt-6">
+            <p>
+              -&gt; Обирай зручний для себе формат
+              <span className="font-semibold text-[#94BFF0]">
+                {" "}
+                Персональні тренування
+              </span>
+              ,
+              <span className="font-semibold text-[#94BFF0]">
+                {" "}
+                Онлайн тренування
+              </span>
+              ,<span className="font-semibold text-[#94BFF0]"> Марафони</span>
+              . <br />
+              -&gt; Змінюй своє життя на краще <br />
+            </p>
           </div>
-          <div className="col-start-2 row-start-2 text-center">
-            <FadeText
-              className="text-4xl"
-              direction="right"
-              framerProps={{
-                show: { transition: { delay: 0.4 } },
-              }}
-              text="Підтянута"
-            />
-          </div>
-          <div className="col-start-3 row-start-3 text-center">
-            <FadeText
-              className="text-4xl"
-              direction="down"
-              framerProps={{
-                show: { transition: { delay: 0.6 } },
-              }}
-              text="Спортивна"
-            />
-          </div>
-          <div className="col-start-4 row-start-4 text-center">
-            <FadeText
-              className="text-4xl"
-              direction="left"
-              framerProps={{
-                show: { transition: { delay: 0.8 } },
-              }}
-              text="Красива"
-            />
-          </div>
-        </div>
-        <div className="mt-4 flex flex-col gap-y-4">
+        </BoxReveal>
+
+        <BoxReveal boxColor={"#94BFF0"} duration={0.5}>
+          <Button
+            className="mt-[1.6rem] px-4 py-2 text-white rounded-full text-xl "
+            size="2xl"
+          >
+            Детальніше
+          </Button>
+        </BoxReveal>
+      </div>
+      {/* <div className="mt-4 flex flex-col gap-y-4">
           <BlurFade delay={0.6} inView>
             <h2 className="text-4xl font-semibold">
               Стань кращою версією себе 🧘
@@ -63,10 +62,9 @@ function HeroSection() {
               Як саме?
             </Button>
           </BlurFade>
-        </div>
-      </div>
+        </div> */}
 
-      <div className="">
+      <BlurFade delay={0.25} inView>
         <Image
           src="/images/hero-image.png"
           alt="Sporty Image"
@@ -74,7 +72,7 @@ function HeroSection() {
           width={800}
           height={800}
         />
-      </div>
+      </BlurFade>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
+import Link from "next/link";
 
 export function TrainingTypesAccordion() {
   return (
@@ -16,8 +17,10 @@ export function TrainingTypesAccordion() {
         </AccordionTrigger>
         <AccordionContent className="text-lg flex items-center justify-between">
           Особливий підхід до кожного
-          <Button variant="outline">
-            Детальніше <MoveRight className="w-4 h-4 ml-2" />
+          <Button variant="outline" asChild>
+            <Link href="/personal-trainings">
+              Детальніше <MoveRight className="w-4 h-4 ml-2" />
+            </Link>
           </Button>
         </AccordionContent>
       </AccordionItem>
@@ -27,8 +30,10 @@ export function TrainingTypesAccordion() {
         </AccordionTrigger>
         <AccordionContent className="text-lg flex items-center justify-between">
           Будь-коли, будь-де
-          <Button variant="outline">
-            Детальніше <MoveRight className="w-4 h-4 ml-2" />
+          <Button variant="outline" asChild>
+            <Link href="/online-trainings">
+              Детальніше <MoveRight className="w-4 h-4 ml-2" />
+            </Link>
           </Button>
         </AccordionContent>
       </AccordionItem>
@@ -38,8 +43,10 @@ export function TrainingTypesAccordion() {
         </AccordionTrigger>
         <AccordionContent className="text-lg flex items-center justify-between">
           Система челенджів
-          <Button variant="outline">
-            Детальніше <MoveRight className="w-4 h-4 ml-2" />
+          <Button variant="outline" asChild>
+            <Link href="/marathons">
+              Детальніше <MoveRight className="w-4 h-4 ml-2" />
+            </Link>
           </Button>
         </AccordionContent>
       </AccordionItem>
