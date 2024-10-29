@@ -95,6 +95,7 @@ export async function PATCH(
 ) {
   try {
     const { userId } = auth();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { isPublished, ...values } = await req.json();
 
     if (!userId) {

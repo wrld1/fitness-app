@@ -19,6 +19,7 @@ async function ChapterIdPage({
     chapter,
     course,
     muxData,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     attachments,
     nextChapter,
     userProgress,

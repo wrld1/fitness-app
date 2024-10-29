@@ -15,6 +15,7 @@ interface CourseSidebarProps {
 
 export async function CourseSidebar({
   course,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   progressCount,
 }: CourseSidebarProps) {
   const { userId } = auth();
