@@ -1,6 +1,58 @@
-import { CalendarIcon, ChevronDownIcon } from "lucide-react";
+"use client";
+
+import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { CalendarIcon } from "lucide-react";
+import { format } from "date-fns";
+import { uk } from "date-fns/locale";
+
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+
+const formSchema = z.object({
+  name: z.string().min(1, { message: "Ім'я обов'язкове" }),
+  phone: z.string().min(9, { message: "Введіть коректний номер телефону" }),
+  trainingType: z.string().min(1, { message: "Оберіть напрямок тренування" }),
+  date: z.date({ required_error: "Оберіть дату тренування" }),
+});
 
 function BookingSection() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+      trainingType: "",
+    },
+  });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+    // Add your submission logic here
+  };
+
   return (
     <section className="bg-secondary py-16 w-full">
       <div className="container mx-auto px-4">
@@ -13,60 +65,123 @@ function BookingSection() {
             Зарезервуйте час консультації чи персонального тренування
           </p>
 
-          <form className="flex flex-col md:flex-row gap-4">
-            {/* Name Input */}
-            <input
-              type="text"
-              placeholder="Ім'я"
-              className="flex-1 px-4 py-3 rounded-full bg-sage-100/50 border-0 focus:ring-2 focus:ring-[#A4D84F] placeholder:text-sage-700"
-            />
-
-            {/* Phone Input */}
-            <div className="flex-1 relative">
-              <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
-                <img src="/images/ua-flag.svg" alt="UA" className="w-5 h-4" />
-                <span>+380</span>
-              </div>
-              <input
-                type="tel"
-                placeholder="(99) 999-99-99"
-                className="w-full px-4 py-3 pl-24 rounded-full bg-sage-100/50 border-0 focus:ring-2 focus:ring-[#A4D84F] placeholder:text-sage-700"
-              />
-            </div>
-
-            {/* Training Type Select */}
-            <div className="flex-1 relative">
-              <select
-                className="w-full appearance-none px-4 py-3 rounded-full bg-sage-100/50 border-0 focus:ring-2 focus:ring-[#A4D84F] text-sage-700"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Напрямок тренування
-                </option>
-                <option value="yoga">Йога</option>
-                <option value="fitness">Фітнес</option>
-                <option value="pilates">Пілатес</option>
-              </select>
-              <ChevronDownIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-sage-700 pointer-events-none" />
-            </div>
-
-            {/* Date Input */}
-            <div className="flex-1 relative">
-              <input
-                type="date"
-                className="w-full px-4 py-3 rounded-full bg-sage-100/50 border-0 focus:ring-2 focus:ring-[#A4D84F] text-sage-700"
-              />
-              <CalendarIcon className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-sage-700 pointer-events-none" />
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="px-8 py-3 rounded-full bg-white text-sage-900 hover:bg-sage-50 transition-colors"
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="flex flex-col md:flex-row gap-4"
             >
-              Забронювати
-            </button>
-          </form>
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormControl>
+                      <Input
+                        placeholder="Ім'я"
+                        {...field}
+                        className="rounded-full bg-white placeholder:text-sage-700"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem className="flex-1 relative">
+                    <FormControl>
+                      <div className="relative">
+                        <Input
+                          type="tel"
+                          placeholder="+38 (095) 999-99-99"
+                          {...field}
+                          className="w-full rounded-full bg-white placeholder:text-sage-700"
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="trainingType"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger className="rounded-full bg-white text-left">
+                          <SelectValue placeholder="Напрямок тренування" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="yoga">Йога</SelectItem>
+                        <SelectItem value="fitness">Фітнес</SelectItem>
+                        <SelectItem value="pilates">Пілатес</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="date"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant="outline"
+                            className={cn(
+                              "w-full rounded-full bg-white",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value ? (
+                              format(field.value, "PPP", { locale: uk })
+                            ) : (
+                              <span>Оберіть дату</span>
+                            )}
+                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={field.value}
+                          onSelect={field.onChange}
+                          disabled={(date) =>
+                            date < new Date() || date < new Date("1900-01-01")
+                          }
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <Button
+                type="submit"
+                className="px-8 py-3 rounded-full transition-colors"
+                variant="outline"
+              >
+                Забронювати
+              </Button>
+            </form>
+          </Form>
         </div>
       </div>
     </section>
