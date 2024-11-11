@@ -22,9 +22,7 @@ export default function TrainingTypesSection() {
             <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
               <TbYoga className="text-4xl" />
             </div>
-            <h3 className="text-xl font-semibold text-center">
-              Відновлення після травм
-            </h3>
+            <h3 className="text-xl font-semibold text-center">Барре</h3>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
@@ -36,21 +34,23 @@ export default function TrainingTypesSection() {
             <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
               <IoFitness className="text-4xl" />
             </div>
-            <h3 className="text-xl font-semibold text-center">Фітнес</h3>
+            <h3 className="text-xl font-semibold text-center">
+              Функціональні тренування
+            </h3>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
               <TbStretching className="text-4xl" />
             </div>
-            <h3 className="text-xl font-semibold text-center">
-              Тренування для вагітних
-            </h3>
+            <h3 className="text-xl font-semibold text-center">Мобіліті</h3>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
               <TbYoga className="text-4xl" />
             </div>
-            <h3 className="text-xl font-semibold text-center">Йога</h3>
+            <h3 className="text-xl font-semibold text-center">
+              Відновлення після травм
+            </h3>
           </div>
         </div>
       </div>

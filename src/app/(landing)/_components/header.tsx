@@ -13,7 +13,7 @@ import ActiveNavItem from "./active-navLink";
 export default function Header() {
   const navItems: { title: string; href: string }[] = [
     { title: "Персональні тренування", href: "/personal-trainings" },
-    { title: "Онлайн тренування", href: "/online-trainings" },
+    { title: "Курси", href: "/online-trainings" },
     { title: "Марафони", href: "/marathons" },
   ];
 

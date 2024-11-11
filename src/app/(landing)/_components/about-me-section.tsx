@@ -1,5 +1,3 @@
-import NumberTicker from "@/components/ui/number-ticker";
-import SparklesText from "@/components/ui/sparkles-text";
 import Image from "next/image";
 
 export default function AboutMeSection() {
@@ -17,39 +15,34 @@ export default function AboutMeSection() {
           />
         </div>
         <div className="w-2/3 pl-8">
-          <h2 className="text-3xl font-bold ">
-            <SparklesText
-              className="text-3xl"
-              text=" Про мене"
-              sparklesCount={6}
-            />
-          </h2>
-          <p className="mt-4 text-lg">
-            Привіт! Мене звати Поліна і я тренерка. Маю за плечима 15 років
-            досвіду у спорті. Живу своєю справою і вважаю себе безробітною, бо
-            те що роблю – це сенс мого життя!
+          <h2 className="text-3xl font-bold">Про Фабіс Єлизавету</h2>
+          <p className="mt-4 text-lg font-semibold">
+            Фабіс Єлизавета — сертифікований тренер, а також фізичний терапевт з
+            понад 10-річним досвідом у спортивній індустрії. Її кар&apos;єра
+            поєднує глибокі знання анатомії та фізіології, здобуті під час
+            навчання, з практичним досвідом роботи як реабілітолога так і
+            тренера.
           </p>
           <ul className="mt-4 space-y-4 list-disc pl-5">
-            <li className="whitespace-pre-wrap text-lg font-medium tracking-tighter">
-              <span className="text-2xl">
-                <NumberTicker value={5} />
-              </span>{" "}
-              Років у спорті
+            <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
+              Єлизавета вірить, що тренування повинні бути не тільки
+              ефективними, але й безпечними. Вона ставить акцент на правильну
+              техніку виконання вправ, що дозволяє досягати максимальних
+              результатів без ризику травм.
             </li>
-            <li className="whitespace-pre-wrap text-lg font-medium tracking-tighter">
-              Тренер групових та персональних класів
+            <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
+              Вона вважає, що здоров&apos;я — це не лише фізична форма, але й
+              внутрішній баланс і гармонія. Її мета — створювати тренування, які
+              будуть не тільки фізично ефективними, але й сприятимуть емоційному
+              та психологічному благополуччю.
             </li>
-            <li className="whitespace-pre-wrap text-lg font-medium tracking-tighter">
-              Артистка балету
+            <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
+              Тренування повинні бути не тільки ефективними, а й приносити
+              задоволення!
             </li>
-            <li className="whitespace-pre-wrap text-lg font-medium tracking-tighter">
-              Учасниця “Танцюють всі”
-            </li>
-            <li className="whitespace-pre-wrap text-lg font-medium tracking-tighter">
-              Робота з дітьми та дорослими
-            </li>
-            <li className="whitespace-pre-wrap text-lg font-medium tracking-tighter">
-              Педагог сучасного танцю в Естрадно-цирковій академії
+            <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
+              Тому приєднуйся до тренувань зі мною і почний кайфувати від себе
+              та власного відображення у дзеркалі!
             </li>
           </ul>
         </div>

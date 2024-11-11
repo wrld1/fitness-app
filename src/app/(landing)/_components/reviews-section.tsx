@@ -65,7 +65,13 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img
+          className="rounded-full"
+          width="32"
+          height="32"
+          alt="Review"
+          src={img}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -80,7 +86,7 @@ const ReviewCard = ({
 
 export function ReviewsSection() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-neutral-50 ">
+    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden border bg-neutral-50 ">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

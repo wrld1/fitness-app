@@ -3,7 +3,6 @@ import BoxReveal from "@/components/ui/box-reveal";
 import Image from "next/image";
 import StepsSection from "./_components/steps-section";
 import BookingSection from "./_components/booking-section";
-import { ReviewsSection } from "./_components/reviews-section";
 
 function PersonalTrainingsPage() {
   return (
@@ -20,10 +19,13 @@ function PersonalTrainingsPage() {
               </BoxReveal>
               <BoxReveal duration={0.5}>
                 <p className="text-lg md:text-xl">
-                  Кожне персональне тренування – це набагато більше, аніж
-                  взаємини &quot;тренер-клієнт&quot;. Для мене важливо відчувати
-                  людину, настрій та ціль. Тому на кожного чекають особливі
-                  класи та підбір навантаження та вправ під запит!
+                  Це індивідуальний підхід! Кожне тренування розробляється з
+                  урахуванням ваших потреб, цілей та фізіологічних особливостей
+                  Тренування проходить у форматі відео дзвінка, що дає змогу
+                  контролювати вашу техніку виконання вправ, це допомагає
+                  уникнути травм та покращити результати. І ще один з важливих
+                  аспектів на шляху до здорового та красивого тіла, це
+                  мотивація, психологічна підтримка та дисципліна!
                 </p>
               </BoxReveal>
             </div>
@@ -55,7 +57,6 @@ function PersonalTrainingsPage() {
       </section>
       <StepsSection />
       <BookingSection />
-      <ReviewsSection />
     </>
   );
 }
