@@ -20,7 +20,10 @@ function ActiveNavItem({
   return (
     <NavigationMenuLink
       href={href}
-      className={cn(className, isActive && "bg-accent text-accent-foreground")}
+      className={cn(
+        className,
+        isActive && "bg-primary/75 text-accent-foreground"
+      )}
     >
       {children}
     </NavigationMenuLink>

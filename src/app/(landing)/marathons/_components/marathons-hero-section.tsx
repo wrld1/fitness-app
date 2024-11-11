@@ -9,7 +9,7 @@ function MarathonsHeroSection() {
           <div>
             <BoxReveal duration={0.5}>
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl mb-6">
-                Фітнес <span className="text-[#A4D84F]">марафони</span>
+                Фітнес <span className="text-[#94BFF0]">марафони</span>
               </h1>
             </BoxReveal>
             <BoxReveal duration={0.5}>

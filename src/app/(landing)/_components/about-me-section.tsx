@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function AboutMeSection() {
   return (
-    <div className="px-8 py-12 bg-neutral-50 w-full">
-      <div className="container flex items-center justify-between">
+    <div className="px-8 py-12 bg-neutral-50 w-full z-10" id="about-me">
+      <div className="container flex flex-col md:flex-row items-center justify-between">
         <div className="w-1/3">
           <Image
             src="/images/about-me.jpg"
@@ -14,7 +14,7 @@ export default function AboutMeSection() {
             style={{ aspectRatio: "1 / 1" }}
           />
         </div>
-        <div className="w-2/3 pl-8">
+        <div className=" w-full md:w-2/3 pl-0 md:pl-8">
           <h2 className="text-3xl font-bold">Про Фабіс Єлизавету</h2>
           <p className="mt-4 text-lg font-semibold">
             Фабіс Єлизавета — сертифікований тренер, а також фізичний терапевт з
