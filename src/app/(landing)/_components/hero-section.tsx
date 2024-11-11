@@ -1,7 +1,4 @@
 import BlurFade from "@/components/ui/blur-fade";
-import BoxReveal from "@/components/ui/box-reveal";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 function HeroSection() {
   return (
