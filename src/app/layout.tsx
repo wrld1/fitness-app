@@ -7,12 +7,12 @@ import { ukUA } from "@clerk/localizations";
 import ToasterProvider from "@/components/providers/toaster-provider";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { ConfettiProvider } from "@/components/providers/confetti-provider";
-import { Noto_Serif } from "next/font/google";
+import { Geologica } from "next/font/google";
 
-const notoSerif = Noto_Serif({
+const geologica = Geologica({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin", "cyrillic"],
-  style: ["normal", "italic"],
+  style: ["normal"],
   display: "swap",
 });
 
@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider afterSignOutUrl="/" localization={ukUA}>
-      <html lang="en" className={notoSerif.className}>
+      <html lang="en" className={geologica.className}>
         <body className="min-h-screen">
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           {/* <SignedOut>
