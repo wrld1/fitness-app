@@ -1,6 +1,9 @@
 function StepsSection() {
   return (
-    <div className="container relative min-h-screen py-20">
+    <div
+      id="steps"
+      className="w-full relative min-h-screen py-20 bg-orangeMain text-orangeMainForeground"
+    >
       <h2 className="text-4xl font-medium mb-20 text-center">
         Як проходить консультація?
       </h2>
@@ -18,7 +21,7 @@ function StepsSection() {
           >
             <path
               d="M25 0C35 150 15 300 25 450C35 600 25 600 25 600"
-              stroke="#94BFF0"
+              stroke="#000000"
               strokeWidth="2"
               strokeDasharray="5 5"
               fill="none"
@@ -39,6 +42,7 @@ function StepsSection() {
           />
         </div>
       </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
     </div>
   );
 }
@@ -46,7 +50,7 @@ function StepsSection() {
 function ProcessPoint({ number, title }: { number: number; title: string }) {
   return (
     <div className="flex items-center gap-6">
-      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#94BFF0] text-white font-medium">
+      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-secondary font-medium">
         {number}
       </div>
       <p className="text-lg max-w-md">{title}</p>

@@ -55,6 +55,14 @@ html body[data-scroll-locked] {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --orangeMain:  18 65% 48%;
+    --orangeMain-foreground: 0 0% 100%;
+    --orangeSecondary: 18 30% 87%;
+    --orangeSecondary-foreground: 0 0% 0%;
+    --blueMain:  211 100% 83%;
+    --blueMain-foreground: 0 0% 0%;
+    --blueSecondary: 211 30% 87%;
+    --blueSecondary-foreground: 0 0% 0%;
   }
   .dark {
     --background: 52 50% 10%;

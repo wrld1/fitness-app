@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function TabsImage() {
   return (
-    <Tabs defaultValue="personal_trainings" className="w-[1000px]">
+    <Tabs defaultValue="personal_trainings" className="w-[700px]">
       <TabsList className="grid w-full grid-cols-2 bg-primary/10 backdrop-blur-md shadow-lg">
         <TabsTrigger value="personal_trainings" className="text-foreground">
           Персональні тренування
@@ -17,8 +17,8 @@ export function TabsImage() {
           <Image
             src="/images/personal-trainings.jpg"
             alt="Personal Trainings"
-            width={400}
-            height={600}
+            width={300}
+            height={450}
             priority
             className="rounded-md"
           />
@@ -38,8 +38,8 @@ export function TabsImage() {
           <Image
             src="/images/courses.jpg"
             alt="Courses"
-            width={400}
-            height={600}
+            width={300}
+            height={450}
             priority
             className="rounded-md"
           />

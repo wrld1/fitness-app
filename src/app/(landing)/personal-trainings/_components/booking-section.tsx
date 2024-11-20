@@ -54,7 +54,10 @@ function BookingSection() {
   };
 
   return (
-    <section className="bg-secondary py-16 w-full">
+    <section
+      id="booking"
+      className="bg-orangeMain/20 text-orangeSecondaryForeground py-16 w-full"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl mb-2">

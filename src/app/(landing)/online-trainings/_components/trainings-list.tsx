@@ -22,7 +22,7 @@ const programs: TrainingProgram[] = [
       "Також якщо у вас є мрія сісти на шпагат на тренуваннях я розповідаю, як зробити це безпечно",
       "Ти з нами?",
     ],
-    image: "/images/training-1.jpg",
+    image: "/images/courses.jpg",
   },
 ];
 
@@ -47,7 +47,7 @@ function TrainingsList() {
               }`}
             >
               <div className="aspect-[2/3] relative">
-                <Image
+                {/* <Image
                   src={program.image}
                   alt={program.title}
                   className="object-cover rounded-lg"
@@ -55,7 +55,7 @@ function TrainingsList() {
                   width={400}
                   height={634}
                   priority={program.id === 1}
-                />
+                /> */}
               </div>
 
               <div className="flex-1 flex flex-col justify-center">
