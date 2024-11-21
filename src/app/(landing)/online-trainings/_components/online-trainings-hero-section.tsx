@@ -28,7 +28,7 @@ function OnlineTrainingsHeroSection() {
               className="relative aspect-square w-[580px] max-w-2xl h-[600px] overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
             >
               <Image
-                src="/images/courses-hero.jpg"
+                src="/images/courses-hero-img.jpg"
                 alt="Personal Trainings"
                 className="object-cover rounded-lg shadow-lg"
                 fill

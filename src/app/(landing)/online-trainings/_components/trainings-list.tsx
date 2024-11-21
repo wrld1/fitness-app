@@ -22,7 +22,7 @@ const programs: TrainingProgram[] = [
       "Також якщо у вас є мрія сісти на шпагат на тренуваннях я розповідаю, як зробити це безпечно",
       "Ти з нами?",
     ],
-    image: "/images/courses.jpg",
+    image: "/images/courses-img.jpg",
   },
 ];
 

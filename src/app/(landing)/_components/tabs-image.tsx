@@ -15,7 +15,7 @@ export function TabsImage() {
       <TabsContent value="personal_trainings">
         <div className="rounded-lg bg-primary p-2 flex transition">
           <Image
-            src="/images/personal-trainings.jpg"
+            src="/images/personal-trainings-img.jpg"
             alt="Personal Trainings"
             width={300}
             height={450}
@@ -36,7 +36,7 @@ export function TabsImage() {
       <TabsContent value="courses">
         <div className="rounded-lg bg-primary p-2 flex ">
           <Image
-            src="/images/courses.jpg"
+            src="/images/courses-img.jpg"
             alt="Courses"
             width={300}
             height={450}

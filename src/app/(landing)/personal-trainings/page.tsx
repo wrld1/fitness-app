@@ -54,7 +54,7 @@ function PersonalTrainingsPage() {
             className="relative aspect-square w-full max-w-2xl justify-self-end h-[600px] overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
           >
             <Image
-              src="/images/personal-trainings-hero.jpg"
+              src="/images/personal-trainings-hero-img.jpg"
               alt="Personal Trainings"
               className="object-cover rounded-lg shadow-lg"
               fill
