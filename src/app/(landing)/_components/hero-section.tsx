@@ -1,7 +1,6 @@
 import BlurFade from "@/components/ui/blur-fade";
 import Image from "next/image";
 import { TabsImage } from "./tabs-image";
-import ShimmerButton from "@/components/ui/shimmer-button";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

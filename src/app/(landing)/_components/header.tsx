@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Dumbbell } from "lucide-react";
 import MobileSidebar from "./mobile-sidebar";
-import PulsatingButton from "@/components/ui/pulsating-button";
 import ActiveNavItem from "./active-navLink";
 import ShimmerButton from "@/components/ui/shimmer-button";
 
