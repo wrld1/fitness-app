@@ -9,7 +9,7 @@ function HeroSection() {
     <div className="relative px-6 w-full pt-14 lg:px-8 min-h-screen overflow-visible">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero-image.jpg"
+          src="/images/hero.jpg"
           alt="Hero Background"
           fill
           priority
