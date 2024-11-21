@@ -23,7 +23,7 @@ function HeroSection() {
       <div className="mx-auto py-32 flex justify-center flex-col gap-20 items-center sm:py-48 lg:py-56">
         <div className="text-center">
           <BlurFade delay={0.25} inView>
-            <h1 className="text-balance text-secondary text-5xl font-semibold tracking-tight sm:text-7xl ">
+            <h1 className="font-heading text-4xl font-bold sm:text-5xl md:text-7xl text-secondary">
               Стань кращою
             </h1>
             <p className="mt-8 text-secondary/80 text-pretty text-lg font-medium  sm:text-xl/8">

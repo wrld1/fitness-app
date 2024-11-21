@@ -28,7 +28,7 @@ const programs: TrainingProgram[] = [
 
 function TrainingsList() {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-blueMain text-blueMainForeground w-full">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl mb-2">
           Ознайомтесь із напрямками тренувань, які я викладаю,
@@ -47,7 +47,7 @@ function TrainingsList() {
               }`}
             >
               <div className="aspect-[2/3] relative">
-                {/* <Image
+                <Image
                   src={program.image}
                   alt={program.title}
                   className="object-cover rounded-lg"
@@ -55,7 +55,7 @@ function TrainingsList() {
                   width={400}
                   height={634}
                   priority={program.id === 1}
-                /> */}
+                />
               </div>
 
               <div className="flex-1 flex flex-col justify-center">
@@ -71,7 +71,7 @@ function TrainingsList() {
                   ))}
                 </div>
 
-                <Button className="mt-8 px-6 py-3 rounded-full border transition-colors w-full md:w-1/3 text-lg">
+                <Button className="mt-8 px-6 py-3 bg-black hover:bg-black/80 border-none text-white rounded-full border transition-colors w-full md:w-1/3 text-lg">
                   Пробний урок
                 </Button>
               </div>

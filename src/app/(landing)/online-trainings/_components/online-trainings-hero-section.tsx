@@ -14,16 +14,18 @@ function OnlineTrainingsHeroSection() {
   return (
     <section className="bg-blueMain text-blueMainForeground w-full overflow-hidden min-h-screen flex items-center">
       <div className="container mx-auto px-4 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col items-start">
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl mb-6">
-              Курси
-            </h1>
+        <div className="flex flex-col gap-8 items-center py-[100px]">
+          <div className="flex flex-col items-center">
+            <BlurFade delay={0.25} inView>
+              <h1 className="font-heading text-4xl font-bold text-primary-foreground sm:text-5xl md:text-6xl mb-6">
+                Курси
+              </h1>
+            </BlurFade>
 
             <BlurFade
               delay={0.25 * 2}
               inView
-              className="relative aspect-square w-full max-w-2xl h-[600px] overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
+              className="relative aspect-square w-[580px] max-w-2xl h-[600px] overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
             >
               <Image
                 src="/images/courses-hero.jpg"
@@ -37,7 +39,7 @@ function OnlineTrainingsHeroSection() {
             </BlurFade>
           </div>
 
-          <BlurFade delay={0.25} inView>
+          <BlurFade delay={0.25 * 3} inView>
             <div className="mt-8">
               <h2 className="mb-4 text-xl font-semibold">
                 Курси підійдуть для тебе, якщо:
