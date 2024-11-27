@@ -22,7 +22,7 @@ function ActiveNavItem({
       href={href}
       className={cn(
         className,
-        isActive && "bg-primary/75 text-accent-foreground"
+        isActive && "bg-white/75 text-accent-foreground"
       )}
     >
       {children}

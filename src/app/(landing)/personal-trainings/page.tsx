@@ -18,13 +18,11 @@ function PersonalTrainingsPage() {
             <div className="space-y-6 flex flex-col items-start text-left">
               <h1 className="font-heading text-4xl font-bold text-white sm:text-5xl md:text-6xl">
                 Персональні тренування
-                <span className="block text-2xl font-light opacity-90 sm:text-3xl md:text-4xl">
-                  З врахуванням вашої мети
-                </span>
               </h1>
               <p className="max-w-[600px] text-lg text-white/90 md:text-xl">
                 Індивідуальний підхід! Кожне тренування розробляється з
-                урахуванням ваших потреб, цілей та фізіологічних особливостей
+                урахуванням ваших потреб, цілей та фізіологічних особливостей.
+                <br />
                 Тренування проходить у форматі відео дзвінка, що дає змогу
                 контролювати вашу техніку виконання вправ, це допомагає уникнути
                 травм та покращити результати.

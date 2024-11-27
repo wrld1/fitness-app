@@ -13,7 +13,7 @@ interface TrainingProgram {
 const programs: TrainingProgram[] = [
   {
     id: 1,
-    title: "Шлях до гнучкості або легкість у кожному русі",
+    title: "Гнучкість без меж",
     duration: "Тривалість: 9 тренувань",
     price: "Вартість: 1350 грн",
     description: [

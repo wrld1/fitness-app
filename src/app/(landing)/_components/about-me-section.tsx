@@ -39,15 +39,12 @@ export default function AboutMeSection() {
               будуть не тільки фізично ефективними, але й сприятимуть емоційному
               та психологічному благополуччю.
             </li>
-            <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
-              Тренування повинні бути не тільки ефективними, а й приносити
-              задоволення!
-            </li>
-            <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
-              Тому приєднуйся до тренувань зі мною і почний кайфувати від себе
-              та власного відображення у дзеркалі!
-            </li>
           </ul>
+          <p className="mt-4 text-lg font-semibold">
+            Тренування повинні бути не тільки ефективними, а й приносити
+            задоволення! <br /> Тому приєднуйся до тренувань зі мною і почний
+            кайфувати від себе та власного відображення у дзеркалі!
+          </p>
         </div>
       </div>
     </div>

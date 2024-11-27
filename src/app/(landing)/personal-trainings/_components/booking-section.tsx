@@ -50,7 +50,6 @@ function BookingSection() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
-    // Add your submission logic here
   };
 
   return (
@@ -62,7 +61,7 @@ function BookingSection() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl mb-2">
             Вартість персонального тренування:{" "}
-            <span className="font-medium">60$</span>
+            <span className="font-medium">20$</span>
           </h2>
           <p className="text-lg mb-8">
             Зарезервуйте час консультації чи персонального тренування
@@ -125,9 +124,13 @@ function BookingSection() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="yoga">Йога</SelectItem>
-                        <SelectItem value="fitness">Фітнес</SelectItem>
+                        <SelectItem value="barre">Барре</SelectItem>
+                        <SelectItem value="stretching">Стретчінг</SelectItem>
+                        <SelectItem value="functional_trainings">
+                          Функціональні тренування
+                        </SelectItem>
                         <SelectItem value="pilates">Пілатес</SelectItem>
+                        <SelectItem value="mobility">Мобіліті</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
