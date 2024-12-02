@@ -14,18 +14,12 @@ function OnlineTrainingsHeroSection() {
   return (
     <section className="bg-blueMain text-blueMainForeground w-full overflow-hidden min-h-screen flex items-center">
       <div className="container mx-auto px-4 ">
-        <div className="flex flex-col gap-8 items-center py-[100px]">
-          <div className="flex flex-col items-center">
-            <BlurFade delay={0.25} inView>
-              <h1 className="font-heading text-4xl font-bold text-primary-foreground sm:text-5xl md:text-6xl mb-6">
-                Курси
-              </h1>
-            </BlurFade>
-
+        <div className="flex flex-col gap-8 items-center md:py-[200px]">
+          <div className="flex flex-col items-center gap-2">
             <BlurFade
-              delay={0.25 * 2}
+              delay={0.25}
               inView
-              className="relative aspect-square w-[580px] max-w-2xl h-[600px] overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
+              className="relative aspect-square w-[250px] h-[250px] max-w-2xl overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
             >
               <Image
                 src="/images/courses-hero-img.jpg"
@@ -36,6 +30,27 @@ function OnlineTrainingsHeroSection() {
                 quality={100}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
+            </BlurFade>
+            <BlurFade
+              delay={0.25 * 2}
+              inView
+              className="relative aspect-square w-[250px] h-[250px] max-w-2xl overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
+            >
+              <Image
+                src="/images/logo-temp.webp"
+                alt="Personal Trainings"
+                className="object-cover rounded-lg shadow-lg"
+                fill
+                priority
+                quality={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </BlurFade>
+
+            <BlurFade delay={0.25 * 3} inView>
+              <h1 className="font-heading text-xl font-bold text-primary-foreground sm:text-5xl md:text-6xl my-6">
+                Шлях до твоєї досконалості
+              </h1>
             </BlurFade>
           </div>
 

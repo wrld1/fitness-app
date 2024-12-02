@@ -12,41 +12,43 @@ export default function TrainingTypesSection() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center gap-2">
-            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
+            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80 text-2xl">
               <TbStretching className="text-4xl " />
             </div>
-            <h3 className="text-xl font-semibold  text-center">Стретчінг</h3>
+            <h3 className="text-xl font-semibold text-center">Стретчінг</h3>
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
+            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80 text-2xl">
               <TbYoga className="text-4xl" />
             </div>
             <h3 className="text-xl font-semibold text-center">Барре</h3>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
+            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80 text-2xl">
               <GrYoga className="text-4xl" />
             </div>
             <h3 className="text-xl font-semibold text-center">Пілатес</h3>
           </div>
           <div className="flex flex-col items-center  gap-2">
-            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
-              <IoFitness className="text-4xl" />
+            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80 text-2xl">
+              {/* <IoFitness className="text-4xl" /> */}
+              💓
             </div>
             <h3 className="text-xl font-semibold text-center">
               Функціональні тренування
             </h3>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
+            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80 text-2xl">
               <TbStretching className="text-4xl" />
             </div>
             <h3 className="text-xl font-semibold text-center">Мобіліті</h3>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80">
-              <TbYoga className="text-4xl" />
+            <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80 text-2xl">
+              {/* <TbYoga className="text-4xl" /> */}
+              ❤️‍🩹
             </div>
             <h3 className="text-xl font-semibold text-center">
               Відновлення після травм
