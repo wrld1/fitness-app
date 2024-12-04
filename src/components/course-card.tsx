@@ -32,7 +32,7 @@ function CourseCard({
           <Image fill className="object-cover" alt={title} src={imageUrl} />
         </div>
         <div className="flex flex-col pt-2">
-          <div className="text-lg md:text-base font-medium group-hover:text-border transition line-clamp-2">
+          <div className="text-lg md:text-base font-medium group-hover:text-muted-foreground transition line-clamp-2">
             {title}
           </div>
           <p className="text-xs text-muted-foreground">{category}</p>
