@@ -1,14 +1,16 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
+import { useAuth, UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { SearchInput } from "./search-input";
 import { useEffect, useState } from "react";
+import { isTeacher } from "@/lib/teacher";
 
 function NavbarRoutes() {
+  const { userId } = useAuth();
   const pathname = usePathname();
 
   const [isClient, setIsClient] = useState(false);
@@ -37,16 +39,16 @@ function NavbarRoutes() {
           <Link href="/dashboard">
             <Button className="font-semibold" size="sm" variant="ghost">
               <LogOut className="h-4 w-4 mr-2" />
-              Вийти
+              Повернутися
             </Button>
           </Link>
-        ) : (
+        ) : isTeacher(userId) ? (
           <Link href="/dashboard/teacher/courses">
             <Button className="font-semibold" size="sm" variant="ghost">
               Режим вчителя
             </Button>
           </Link>
-        )}
+        ) : null}
         <UserButton />
       </div>
     </>
