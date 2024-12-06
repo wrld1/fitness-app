@@ -12,8 +12,8 @@ interface CategoriesProps {
 }
 
 const iconMap: Record<Category["name"], IconType> = {
-  Марафони: FaRunning,
-  "Персональні тренування": SiFuturelearn,
+  Барре: FaRunning,
+  Стретчінг: SiFuturelearn,
 };
 
 export function Categories({ items }: CategoriesProps) {

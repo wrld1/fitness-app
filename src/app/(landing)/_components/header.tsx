@@ -45,14 +45,16 @@ export default function Header() {
         <MobileSidebar navItems={navItems} />
         <div className="flex md:w-1/3 items-center ml-auto justify-between space-x-2 md:justify-end">
           <div className="w-full md:w-auto md:flex-none flex">
-            <ShimmerButton
-              className="rounded-full py-1 px-4"
-              background="#CA5B2B"
-            >
-              <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                Пробне тренування
-              </span>
-            </ShimmerButton>
+            <Link href="/dashboard/search">
+              <ShimmerButton
+                className="rounded-full py-1 px-4"
+                background="#CA5B2B"
+              >
+                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                  Пробне тренування
+                </span>
+              </ShimmerButton>
+            </Link>
           </div>
         </div>
       </div>

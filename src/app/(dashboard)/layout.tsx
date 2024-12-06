@@ -1,5 +1,11 @@
+import { Metadata } from "next/types";
 import Navbar from "./_components/navbar";
 import Sidebar from "./_components/sidebar";
+
+export const metadata: Metadata = {
+  title: "Курси Лізи | Список курсів",
+  description: "Прокачай своє тіло",
+};
 
 function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (

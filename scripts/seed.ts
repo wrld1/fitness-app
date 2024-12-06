@@ -6,14 +6,7 @@ const database = new PrismaClient();
 async function main() {
   try {
     await database.category.createMany({
-      data: [
-        { name: "Персональні тренування" },
-        { name: "Онлайн тренування" },
-        { name: "Марафони" },
-        { name: "Fitness" },
-        { name: "Photography" },
-        { name: "Accounting" },
-      ],
+      data: [{ name: "Барре" }, { name: "Стретчінг" }],
     });
     console.log("Success");
   } catch (error) {

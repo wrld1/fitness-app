@@ -37,19 +37,6 @@ export function TrainingTypesAccordion() {
           </Button>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger className="text-xl font-semibold">
-          Марафони
-        </AccordionTrigger>
-        <AccordionContent className="text-lg flex items-center justify-between">
-          Система челенджів
-          <Button variant="outline" asChild>
-            <Link href="/marathons">
-              Детальніше <MoveRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
-        </AccordionContent>
-      </AccordionItem>
     </Accordion>
   );
 }
