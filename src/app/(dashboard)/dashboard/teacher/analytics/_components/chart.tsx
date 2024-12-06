@@ -30,7 +30,7 @@ export function Chart({ data }: ChartProps) {
             axisLine={false}
             tickFormatter={(value) => `$${value}`}
           />
-          <Bar dataKey="total" fill="#036a1" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="total" fill="#0369a1" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </Card>
