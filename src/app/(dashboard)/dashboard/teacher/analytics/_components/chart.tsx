@@ -23,7 +23,6 @@ export function Chart({ data }: ChartProps) {
             axisLine={false}
           />
           <YAxis
-            dataKey="name"
             stroke="#888888"
             fontSize={12}
             tickLine={false}
