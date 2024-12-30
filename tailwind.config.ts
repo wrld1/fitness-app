@@ -140,6 +140,9 @@ const config: Config = {
           },
         },
       },
+      fontFamily: {
+        sans: ["var(--font-recolor)"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

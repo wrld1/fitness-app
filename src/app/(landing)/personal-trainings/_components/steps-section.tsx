@@ -8,13 +8,10 @@ function StepsSection() {
         Як проходить консультація?
       </h2>
 
-      <div className="relative flex flex-col items-center">
-        {/* Curvy SVG Line */}
-
-        {/* Process Points */}
-        <div className="relative z-10 flex flex-col gap-48">
+      <div className="relative flex flex-col items-center container">
+        <div className="relative z-10 flex flex-col gap-32">
           <svg
-            className="absolute left-6 -translate-x-1/2 h-[600px] w-[50px]"
+            className="absolute left-10 md:left-6 -translate-x-1/2 h-full w-[50px]"
             viewBox="0 0 50 600"
             fill="none"
             preserveAspectRatio="none"
@@ -30,15 +27,32 @@ function StepsSection() {
 
           <ProcessPoint
             number={1}
-            title="Ми визначаємось з вашою цілью, обговорюємо наявні проблеми зі здоров‘ям, фізіологічні особливості та рівень фізичної підготовки"
+            title="Знайомство та визначення мети"
+            listItems={[
+              "Обговорення цілей (схуднення, набір маси, покращення здоров'я), наявних проблеми зі здоров‘ям, фізіологічних особливостей та рівня фізичної підготовки",
+            ]}
           />
           <ProcessPoint
             number={2}
-            title="Далі підбираємо комфортний час та платформу для зустрічі (Telegram або Zoom)"
+            title="Збір інформації"
+            listItems={[
+              "Антропометрія: вага, зріст, заміри",
+              "Аналіз поточного раціону",
+              "Оцінка харчового щоденника або харчових звичок",
+            ]}
           />
           <ProcessPoint
             number={3}
-            title="Складаємо план та графік тренувань для досягнення нашої цілі)"
+            title="Рекомендації та план дій"
+            listItems={[
+              "Індивідуальний раціон: продукти, порції, режим харчування",
+              "Поради щодо кількості та регулярності тренувань",
+            ]}
+          />
+          <ProcessPoint
+            number={4}
+            title="Підтримка та мотивація"
+            listItems={["Відповіді на запитання, налаштування на прогрес"]}
           />
         </div>
       </div>
@@ -47,13 +61,28 @@ function StepsSection() {
   );
 }
 
-function ProcessPoint({ number, title }: { number: number; title: string }) {
+function ProcessPoint({
+  number,
+  title,
+  listItems,
+}: {
+  number: number;
+  title: string;
+  listItems: string[];
+}) {
   return (
-    <div className="flex items-center gap-6">
-      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-secondary font-medium">
+    <div className="flex items-center gap-6 px-4 md:px-0">
+      <div className="z-20 flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-secondary font-medium shrink-0">
         {number}
       </div>
-      <p className="text-lg max-w-md">{title}</p>
+      <div className="flex flex-col gap-4">
+        <p className="text-2xl max-w-md font-semibold">{title}</p>
+        <ul className="list-disc list-inside">
+          {listItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

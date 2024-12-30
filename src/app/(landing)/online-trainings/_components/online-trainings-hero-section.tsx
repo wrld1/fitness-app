@@ -12,14 +12,14 @@ function OnlineTrainingsHeroSection() {
   ];
 
   return (
-    <section className="bg-blueMain text-blueMainForeground w-full overflow-hidden min-h-screen flex items-center">
+    <section className="pt-36 lg:pt-0 pb-14 md:pb-0 bg-blueMain text-blueMainForeground w-full overflow-hidden min-h-screen flex items-center">
       <div className="container mx-auto px-4 ">
-        <div className="flex flex-col gap-8 items-center md:py-[200px]">
+        <div className="flex flex-col gap-8 items-center md:py-[150px]">
           <div className="flex flex-col items-center gap-2">
             <BlurFade
               delay={0.25}
               inView
-              className="relative aspect-square w-[250px] h-[250px] max-w-2xl overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
+              className="relative aspect-square w-[350px] h-[350px] max-w-2xl overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
             >
               <Image
                 src="/images/courses-hero-img.jpg"
@@ -34,10 +34,10 @@ function OnlineTrainingsHeroSection() {
             <BlurFade
               delay={0.25 * 2}
               inView
-              className="relative aspect-square w-[250px] h-[250px] max-w-2xl overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5]"
+              className="relative aspect-square w-[200px] h-[200px] max-w-2xl overflow-hidden rounded-3xl lg:aspect-[4/5]"
             >
               <Image
-                src="/images/logo-temp.webp"
+                src="/logos/logo2-black.png"
                 alt="Personal Trainings"
                 className="object-cover rounded-lg shadow-lg"
                 fill
@@ -48,13 +48,13 @@ function OnlineTrainingsHeroSection() {
             </BlurFade>
 
             <BlurFade delay={0.25 * 3} inView>
-              <h1 className="font-heading text-xl font-bold text-primary-foreground sm:text-5xl md:text-6xl my-6">
+              <h1 className="font-heading text-center font-bold text-primary-foreground text-4xl sm:text-5xl md:text-6xl my-6">
                 Шлях до твоєї досконалості
               </h1>
             </BlurFade>
           </div>
 
-          <BlurFade delay={0.25 * 3} inView>
+          <BlurFade delay={0.25} inView>
             <div className="mt-8">
               <h2 className="mb-4 text-xl font-semibold">
                 Курси підійдуть для тебе, якщо:

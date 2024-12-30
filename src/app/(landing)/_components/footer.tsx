@@ -1,12 +1,18 @@
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 function Footer() {
   return (
     <footer className="bg-neutral-50 py-16">
       <div className="container mx-auto flex flex-col items-center md:flex-row md:justify-between">
-        <div className="flex items-center mb-4 md:mb-0 ">
-          <h4 className="text-2xl font-bold mr-2">FitnessPro</h4>
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-4 md:mb-0">
+          <Image
+            src="/logos/logo1.png"
+            alt="Footer Logo"
+            width={300}
+            height={300}
+          />
           <Link href="https://www.instagram.com/fitnesspro_ua/">
             <FaInstagram className="w-10 h-10" />
           </Link>

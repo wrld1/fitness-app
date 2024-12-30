@@ -5,10 +5,10 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Dumbbell } from "lucide-react";
 import MobileSidebar from "./mobile-sidebar";
 import ActiveNavItem from "./active-navLink";
 import ShimmerButton from "@/components/ui/shimmer-button";
+import Image from "next/image";
 
 export default function Header() {
   const navItems: { title: string; href: string }[] = [
@@ -18,13 +18,13 @@ export default function Header() {
   ];
 
   return (
-    <header className="container fixed top-4 left-1/2 -translate-x-1/2 z-50 mx-auto rounded-2xl border border-border/10 bg-white/80 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-white/30">
+    <header className="w-[95vw] md:container fixed top-2 md:top-4 left-1/2 -translate-x-1/2 z-50 mx-auto rounded-2xl border border-border/10 bg-white/80 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-white/30">
       <div className="flex py-2 items-center px-4 md:px-3">
         <div className="hidden md:flex flex-1 justify-between w-2/3">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Dumbbell className="h-6 w-6" />
+            <Image src="/logos/logo3.png" alt="Logo" height={40} width={40} />
             <span className="hidden font-bold sm:inline-block text-xl">
-              FitnessPro
+              Body Update
             </span>
           </Link>
           <NavigationMenu>
@@ -50,7 +50,7 @@ export default function Header() {
                 className="rounded-full py-1 px-4"
                 background="#CA5B2B"
               >
-                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                <span className="whitespace-pre-wrap text-center text-base font-medium tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                   Пробне тренування
                 </span>
               </ShimmerButton>

@@ -55,7 +55,7 @@ function BookingSection() {
   return (
     <section
       id="booking"
-      className="bg-orangeMain/20 text-orangeSecondaryForeground py-16 w-full"
+      className="bg-orangeSecondary text-orangeSecondaryForeground py-16 w-full"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
@@ -81,7 +81,7 @@ function BookingSection() {
                       <Input
                         placeholder="Ім'я"
                         {...field}
-                        className="rounded-full bg-white placeholder:text-sage-700"
+                        className="rounded-full bg-white placeholder:text-sage-700 border-black"
                       />
                     </FormControl>
                     <FormMessage />
@@ -100,7 +100,7 @@ function BookingSection() {
                           type="tel"
                           placeholder="+38 (095) 999-99-99"
                           {...field}
-                          className="w-full rounded-full bg-white placeholder:text-sage-700"
+                          className="w-full rounded-full bg-white placeholder:text-sage-700 border-black"
                         />
                       </div>
                     </FormControl>
@@ -119,7 +119,7 @@ function BookingSection() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="rounded-full bg-white text-left">
+                        <SelectTrigger className="rounded-full bg-white text-left border-black">
                           <SelectValue placeholder="Напрямок тренування" />
                         </SelectTrigger>
                       </FormControl>
@@ -149,7 +149,7 @@ function BookingSection() {
                           <Button
                             variant="outline"
                             className={cn(
-                              "w-full rounded-full bg-white",
+                              "w-full rounded-full bg-white border-black",
                               !field.value && "text-muted-foreground"
                             )}
                           >
@@ -162,7 +162,7 @@ function BookingSection() {
                           </Button>
                         </FormControl>
                       </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
+                      <PopoverContent className="w-auto p-0 " align="start">
                         <Calendar
                           mode="single"
                           selected={field.value}
@@ -181,7 +181,7 @@ function BookingSection() {
 
               <Button
                 type="submit"
-                className="px-8 py-3 rounded-full transition-colors"
+                className="px-8 py-3 rounded-full transition-colors bg-orangeMain border-black/50"
                 variant="outline"
               >
                 Забронювати

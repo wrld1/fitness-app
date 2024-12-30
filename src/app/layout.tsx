@@ -16,6 +16,12 @@ const geologica = Geologica({
   display: "swap",
 });
 
+// const recolor = localFont({
+//   src: "../../public/fonts/recolor.otf",
+//   display: "swap",
+//   variable: "--font-recolor",
+// });
+
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -28,8 +34,8 @@ const geologica = Geologica({
 // });
 
 export const metadata: Metadata = {
-  title: "Курси Лізи",
-  description: "Прокачай своє тіло",
+  title: "Body Update by Liza Fabis",
+  description: "Онови своє тіло",
 };
 
 export default function RootLayout({

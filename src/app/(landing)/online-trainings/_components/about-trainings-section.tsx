@@ -42,7 +42,7 @@ function AboutTrainingsSection() {
           <div className="rounded-md bg-white shadow-md p-4 flex gap-2 items-center min-h-[90px]">
             <CircleCheck className="flex-shrink-0" />
             <p className="text-lg font-semibold ">
-              Доступ до тренуваннь в будь-який час
+              Доступ до тренувань в будь-який час
             </p>
           </div>
 

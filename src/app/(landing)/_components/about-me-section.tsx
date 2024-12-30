@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function AboutMeSection() {
   return (
-    <div
-      className="px-8 py-12 bg-neutral-50 w-full z-10 pt-96 relative"
+    <section
+      className="px-4 md:px-8 py-12 bg-neutral-50 w-full z-10 relative pt-16 md:pt-32"
       id="about-me"
     >
-      <div className="container flex flex-col md:flex-row items-center justify-between">
-        <div className="w-1/3">
+      <div className="container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
+        <div className="md:w-1/3">
           <Image
             src="/images/about-me.jpg"
             alt="About Me Image"
@@ -28,16 +28,18 @@ export default function AboutMeSection() {
           </p>
           <ul className="mt-4 space-y-4 list-disc pl-5">
             <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
-              Єлизавета вірить, що тренування повинні бути не тільки
-              ефективними, але й безпечними. Вона ставить акцент на правильну
-              техніку виконання вправ, що дозволяє досягати максимальних
-              результатів без ризику травм.
+              Єлизавета вважає, що спорт — це шлях до вдосконалення не лише
+              тіла, а й душі. Вона впевнена, що здоров’я — це гармонія між
+              фізичною формою, внутрішнім балансом та емоційним спокоєм. Її
+              головна мета — створювати тренування, які допомагають здобути тіло
+              мрії, відновити енергію, позбутися стресу та насолоджуватися
+              кожною хвилиною занять.
             </li>
             <li className="whitespace-pre-wrap text-lg font-regular tracking-tighter">
-              Вона вважає, що здоров&apos;я — це не лише фізична форма, але й
-              внутрішній баланс і гармонія. Її мета — створювати тренування, які
-              будуть не тільки фізично ефективними, але й сприятимуть емоційному
-              та психологічному благополуччю.
+              Якщо ти хочеш змінити своє життя, почати кайфувати від тренувань і
+              насолоджуватися своїм прогресом, без заборон та виснажливих
+              тренувань, приєднуйся вже сьогодні! Почни шлях до себе, наповненої
+              енергією та впевненістю
             </li>
           </ul>
           <p className="mt-4 text-lg font-semibold">
@@ -47,6 +49,6 @@ export default function AboutMeSection() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

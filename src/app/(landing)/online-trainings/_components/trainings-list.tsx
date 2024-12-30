@@ -4,10 +4,11 @@ import Image from "next/image";
 interface TrainingProgram {
   id: number;
   title: string;
-  duration: string;
-  price: string;
+  duration?: string;
+  price?: string;
   description: string[];
   image: string;
+  published?: boolean;
 }
 
 const programs: TrainingProgram[] = [
@@ -23,6 +24,16 @@ const programs: TrainingProgram[] = [
       "Ти з нами?",
     ],
     image: "/images/courses-img.jpg",
+    published: true,
+  },
+  {
+    id: 2,
+    title: "Рельєф і грація",
+    description: [
+      "Тебе чекає неймовірне знайомство зі світом Барре. Тут зібрані унікальні тренування створені для тих, хто прагне досягти елегантності у своїх рухах, додати витонченості та пластичності своїй фігурі, а також значно покращити її тонус і форму.Тренування спрямовані на активну роботу з м'язами всього тіла, особливо проблемними зонами, такими як живіт, стегна та сідниці. Ти вже готова до справжньої трансформації",
+    ],
+    image: "/images/personal-trainings-hero-img.jpg",
+    published: false,
   },
 ];
 
@@ -46,7 +57,7 @@ function TrainingsList() {
                 program.id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
               }`}
             >
-              <div className="aspect-[2/3] relative">
+              <div className="md:aspect-[2/3] relative">
                 <Image
                   src={program.image}
                   alt={program.title}
@@ -60,9 +71,12 @@ function TrainingsList() {
 
               <div className="flex-1 flex flex-col justify-center">
                 <h3 className="text-2xl font-medium mb-4">{program.title}</h3>
-                <p className="text-lg mb-1">{program.duration}</p>
-                <p className="text-lg mb-6">{program.price}</p>
-
+                {program.duration && (
+                  <p className="text-lg mb-1">{program.duration}</p>
+                )}
+                {program.price && (
+                  <p className="text-lg mb-6">{program.price}</p>
+                )}
                 <div className="space-y-4">
                   {program.description.map((paragraph, index) => (
                     <p key={index} className="text-lg">
@@ -71,8 +85,11 @@ function TrainingsList() {
                   ))}
                 </div>
 
-                <Button className="mt-8 px-6 py-3 bg-black hover:bg-black/80 border-none text-white rounded-full border transition-colors w-full md:w-1/3 text-lg">
-                  Пробний урок
+                <Button
+                  className="mt-8 px-6 py-3 bg-black hover:bg-black/80 border-none text-white rounded-full border transition-colors w-full lg:w-1/3 text-lg"
+                  disabled={!program.published}
+                >
+                  {program.published ? "Пробний урок" : "Coming soon"}
                 </Button>
               </div>
             </div>
