@@ -12,7 +12,7 @@ export function TrainingTypesAccordion() {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
-        <AccordionTrigger className="text-xl font-semibold">
+        <AccordionTrigger className="text-xl font-semibold text-left">
           Персональні тренування
         </AccordionTrigger>
         <AccordionContent className="text-lg flex items-center justify-between">
@@ -25,7 +25,7 @@ export function TrainingTypesAccordion() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger className="text-xl font-semibold">
+        <AccordionTrigger className="text-xl font-semibold text-left">
           Курси
         </AccordionTrigger>
         <AccordionContent className="text-lg flex items-center justify-between">
