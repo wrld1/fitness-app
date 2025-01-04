@@ -17,9 +17,11 @@ function SidebarItem({ href, label, icon: Icon }: SidebarItemsProps) {
   console.log("href", href);
 
   const isActive =
-    pathname === href ||
-    (pathname.startsWith(href) &&
-      pathname.split("/").length === href.split("/").length);
+    href === "/"
+      ? pathname === "/"
+      : pathname === href ||
+        (pathname?.startsWith(href) &&
+          pathname.split("/").length === href.split("/").length);
 
   const onClick = () => {
     router.push(href);
