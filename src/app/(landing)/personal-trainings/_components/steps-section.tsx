@@ -71,7 +71,7 @@ function ProcessPoint({
   listItems: string[];
 }) {
   return (
-    <div className="flex items-center gap-6 px-4 md:px-0">
+    <div className="flex items-start gap-6 px-4 md:px-0">
       <div className="z-20 flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-secondary font-medium shrink-0">
         {number}
       </div>

@@ -5,7 +5,7 @@ function AboutTrainingsSection() {
   return (
     <section className="py-20 bg-neutral-50 w-full">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl mb-16 flex items-center gap-4">
+        <h2 className="text-3xl mb-8 md:mb-16 flex items-center gap-4">
           Тебе чекає
           <span className="h-[1px] bg-black/20 flex-1"></span>
         </h2>
@@ -58,7 +58,7 @@ function AboutTrainingsSection() {
         </p>
       </div>
       <div className="container p-4 mt-10">
-        <h2 className="text-3xl mb-16 flex items-center gap-4">
+        <h2 className="text-3xl mb-8 md:mb-16 flex items-center gap-4">
           FAQ
           <span className="h-[1px] bg-black/20 flex-1"></span>
         </h2>

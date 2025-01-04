@@ -57,7 +57,7 @@ export default function TrainingTypesSection() {
           </div>
         </div>
       </div>
-      <div className="container py-12" id="training-types">
+      <div className="container py-12 md:pb-12 md:pt-20" id="training-types">
         <h3 className="text-center text-4xl font-bold mb-16">Типи тренувань</h3>
         <div className="max-w-4xl mx-auto rounded-lg p-8 bg-gradient-to-b from-secondary to-secondary/80">
           <TrainingTypesAccordion />

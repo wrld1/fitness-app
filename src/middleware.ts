@@ -8,6 +8,7 @@ const isPublicRoute = createRouteMatcher([
   "/personal-trainings",
   "/online-trainings",
   "/marathons",
+  "/api/send",
 ]);
 
 export default clerkMiddleware((auth, request) => {

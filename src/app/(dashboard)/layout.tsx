@@ -3,7 +3,7 @@ import Navbar from "./_components/navbar";
 import Sidebar from "./_components/sidebar";
 
 export const metadata: Metadata = {
-  title: "Курси Лізи | Список курсів",
+  title: "Body Update by Liza Fabis | Список курсів",
   description: "Прокачай своє тіло",
 };
 

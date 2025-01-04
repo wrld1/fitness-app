@@ -5,8 +5,8 @@ import Header from "./_components/header";
 import Footer from "./_components/footer";
 
 export const metadata: Metadata = {
-  title: "Курси Лізи",
-  description: "Прокачай своє тіло",
+  title: "Body Update by Liza Fabis",
+  description: "Онови своє тіло",
 };
 
 export default function RootLayout({

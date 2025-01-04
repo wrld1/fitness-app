@@ -30,10 +30,12 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
+import toast from "react-hot-toast";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Ім'я обов'язкове" }),
   phone: z.string().min(9, { message: "Введіть коректний номер телефону" }),
+  telegram: z.string(),
   trainingType: z.string().min(1, { message: "Оберіть напрямок тренування" }),
   date: z.date({ required_error: "Оберіть дату тренування" }),
 });
@@ -44,12 +46,38 @@ function BookingSection() {
     defaultValues: {
       name: "",
       phone: "",
+      telegram: "",
       trainingType: "",
     },
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          phoneNumber: values.phone,
+          telegram: values.telegram,
+          trainingType: values.trainingType,
+          date: values.date,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+
+      toast.success(
+        "Заявка успішно надіслана. Пізніше я з вами зв'яжусь для подальшого обговорення."
+      );
+    } catch (error) {
+      toast.error("Помилка при відправленні заявки. Спробуйте ще раз");
+      console.error("Error sending email:", error);
+    }
   };
 
   return (
@@ -58,7 +86,7 @@ function BookingSection() {
       className="bg-orangeSecondary text-orangeSecondaryForeground py-16 w-full"
     >
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl mb-2">
             Вартість персонального тренування:{" "}
             <span className="font-medium">20$</span>
@@ -99,6 +127,26 @@ function BookingSection() {
                         <Input
                           type="tel"
                           placeholder="+38 (095) 999-99-99"
+                          {...field}
+                          className="w-full rounded-full bg-white placeholder:text-sage-700 border-black"
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="telegram"
+                render={({ field }) => (
+                  <FormItem className="flex-1 relative">
+                    <FormControl>
+                      <div className="relative">
+                        <Input
+                          type="string"
+                          placeholder="Ваш нікнейм в телеграмі"
                           {...field}
                           className="w-full rounded-full bg-white placeholder:text-sage-700 border-black"
                         />

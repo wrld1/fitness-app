@@ -36,7 +36,7 @@ function HeroSection() {
                 variant="outline"
                 className="rounded-full px-10 py-6 text-2xl font-semibold shadow-sm tracking-wide bg-transparent text-white hover:bg-white/70 hover:text-foreground transition-colors border-white"
               >
-                <Link href="#about-me">Детальніше</Link>
+                <Link href="#training-types">Детальніше</Link>
               </Button>
             </div>
           </BlurFade>

@@ -23,9 +23,6 @@ export default function Header() {
         <div className="hidden md:flex flex-1 justify-between w-2/3">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image src="/logos/logo3.png" alt="Logo" height={40} width={40} />
-            <span className="hidden font-bold sm:inline-block text-xl">
-              Body Update
-            </span>
           </Link>
           <NavigationMenu>
             <NavigationMenuList>

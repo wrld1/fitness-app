@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
-  title: "Курси Лізи | Список курсів - Управління",
+  title: "Body Update by Liza Fabis | Список курсів - Управління",
   description: "Прокачай своє тіло",
 };
 

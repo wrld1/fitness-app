@@ -47,7 +47,7 @@ function OnlineTrainingsHeroSection() {
               />
             </BlurFade>
 
-            <BlurFade delay={0.25 * 3} inView>
+            <BlurFade delay={0.25 * 2}>
               <h1 className="font-heading text-center font-bold text-primary-foreground text-4xl sm:text-5xl md:text-6xl my-6">
                 Шлях до твоєї досконалості
               </h1>

@@ -7,9 +7,9 @@ import { ukUA } from "@clerk/localizations";
 import ToasterProvider from "@/components/providers/toaster-provider";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { ConfettiProvider } from "@/components/providers/confetti-provider";
-import { Geologica } from "next/font/google";
+import { Spectral } from "next/font/google";
 
-const geologica = Geologica({
+const spectral = Spectral({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin", "cyrillic"],
   style: ["normal"],
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider afterSignOutUrl="/" localization={ukUA}>
-      <html lang="en" className={geologica.className}>
+      <html lang="en" className={spectral.className}>
         <body className="min-h-screen">
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           {/* <SignedOut>
