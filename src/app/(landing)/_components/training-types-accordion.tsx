@@ -15,7 +15,7 @@ export function TrainingTypesAccordion() {
         <AccordionTrigger className="text-xl font-semibold text-left">
           Персональні тренування
         </AccordionTrigger>
-        <AccordionContent className="text-lg flex items-center justify-between">
+        <AccordionContent className="text-lg flex flex-col md:flex-row gap-2 md:gap-0 items-start md:items-center justify-between">
           Індивідуальний підхід до кожного
           <Button variant="outline" asChild>
             <Link href="/personal-trainings">
@@ -28,7 +28,7 @@ export function TrainingTypesAccordion() {
         <AccordionTrigger className="text-xl font-semibold text-left">
           Курси
         </AccordionTrigger>
-        <AccordionContent className="text-lg flex items-center justify-between">
+        <AccordionContent className="text-lg flex flex-col md:flex-row gap-2 md:gap-0 items-start md:items-center justify-between">
           Будь-коли, будь-де
           <Button variant="outline" asChild>
             <Link href="/online-trainings">
