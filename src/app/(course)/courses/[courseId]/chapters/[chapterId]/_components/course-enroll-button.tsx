@@ -2,9 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { formatPrice } from "@/lib/format";
-import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import toast from "react-hot-toast";
 
 interface CourseEnrollButtonProps {
   price: number;
@@ -16,19 +15,22 @@ export const CourseEnrollButton = ({
   courseId,
 }: CourseEnrollButtonProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const onClick = async () => {
-    try {
-      setIsLoading(true);
+    // try {
+    //   setIsLoading(true);
 
-      const response = await axios.post(`/api/courses/${courseId}/checkout`);
+    //   const response = await axios.post(`/api/courses/${courseId}/checkout`);
 
-      window.location.assign(response.data.url);
-    } catch {
-      toast.error("Щось пішло не так");
-    } finally {
-      setIsLoading(false);
-    }
+    //   window.location.assign(response.data.url);
+    // } catch {
+    //   toast.error("Щось пішло не так");
+    // } finally {
+    //   setIsLoading(false);
+    // }
+    setIsLoading(true);
+    router.push(`/courses/${courseId}/purchase?price=${price}`);
   };
 
   return (

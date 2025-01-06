@@ -12,9 +12,7 @@ interface SidebarItemsProps {
 
 function SidebarItem({ href, label, icon: Icon }: SidebarItemsProps) {
   const pathname = usePathname();
-  console.log(pathname);
   const router = useRouter();
-  console.log("href", href);
 
   const isActive =
     href === "/"

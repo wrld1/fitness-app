@@ -8,6 +8,7 @@ export async function POST(
 ) {
   try {
     const user = await currentUser();
+    const { userId } = await req.json();
 
     if (!user || !user.id || !user.emailAddresses?.[0]?.emailAddress) {
       return new NextResponse("Unauthorized", { status: 401 });
@@ -19,6 +20,10 @@ export async function POST(
         isPublished: true,
       },
     });
+
+    if (!course) {
+      return new NextResponse("Not found", { status: 404 });
+    }
 
     const purchase = await db.purchase.findUnique({
       where: {
@@ -33,9 +38,17 @@ export async function POST(
       return new NextResponse("Курс вже придбано", { status: 400 });
     }
 
-    if (!course) {
-      return new NextResponse("Not found", { status: 404 });
-    }
+    const newPurchase = await db.purchase.create({
+      data: {
+        userId: userId || user.id,
+        courseId: params.courseId,
+      },
+    });
+
+    return NextResponse.json({
+      success: true,
+      purchase: newPurchase,
+    });
   } catch (error) {
     console.log("[COURSE_ID_CHECKOUT]", error);
     return new NextResponse("Internal error", { status: 500 });
