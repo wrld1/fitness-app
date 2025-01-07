@@ -28,11 +28,13 @@ export async function POST(
     const purchase = await db.purchase.findUnique({
       where: {
         userId_courseId: {
-          userId: user.id,
+          userId: userId || user.id,
           courseId: params.courseId,
         },
       },
     });
+
+    console.log("Existing purchase:", purchase);
 
     if (purchase) {
       return new NextResponse("Курс вже придбано", { status: 400 });
@@ -40,10 +42,12 @@ export async function POST(
 
     const newPurchase = await db.purchase.create({
       data: {
-        userId: userId || user.id,
+        userId: userId,
         courseId: params.courseId,
       },
     });
+
+    console.log(newPurchase);
 
     return NextResponse.json({
       success: true,

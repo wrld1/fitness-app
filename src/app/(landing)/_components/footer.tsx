@@ -18,11 +18,8 @@ function Footer() {
           </Link>
         </div>
         <div className="text-center md:text-left mb-4 md:mb-0 flex flex-col gap-2">
-          <a href="tel:+380404567223" className="block">
-            +38 (040) 456 72 23
-          </a>
           <a href="mailto:test.mail@gmail.com" className="block">
-            test.mail@gmail.com
+            lf.body.update@gmail.com
           </a>
         </div>
         <div className="text-center md:text-left flex flex-col gap-2">
@@ -33,6 +30,11 @@ function Footer() {
             Публічна оферта
           </Link>
         </div>
+      </div>
+      <div className="container flex justify-center pt-4">
+        <p className="text-muted-foreground">
+          © {new Date().getFullYear()} Всі права захищені
+        </p>
       </div>
     </footer>
   );

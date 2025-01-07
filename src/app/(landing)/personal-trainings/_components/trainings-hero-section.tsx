@@ -28,7 +28,7 @@ function TrainingsHeroSection() {
           <div className="flex flex-wrap gap-4">
             <Button
               asChild
-              className="border-2 border-orangeMainForeground bg-transparent px-8 text-orangeMainForeground hover:bg-orangeMainForeground hover:text-white"
+              className="border-2 border-orangeMainForeground bg-transparent px-8 text-orangeMainForeground hover:bg-orangeMainForeground hover:text-white w-full md:w-auto"
               size="lg"
               variant="outline"
             >
@@ -36,7 +36,7 @@ function TrainingsHeroSection() {
             </Button>
             <Button
               asChild
-              className="bg-orangeMainForeground px-8 text-white hover:bg-orangeMainForeground/90"
+              className="bg-orangeMainForeground px-8 text-white hover:bg-orangeMainForeground/90 w-full md:w-auto"
               size="lg"
             >
               <Link href="#booking">Забронювати зайняття</Link>
@@ -46,7 +46,7 @@ function TrainingsHeroSection() {
         <BlurFade
           delay={0.25 * 2}
           inView
-          className="relative aspect-square w-full max-w-2xl lg:justify-self-end h-[500px] md:h-[600px] overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5] flex justify-start"
+          className="relative aspect-square w-full lg:max-w-2xl lg:justify-self-end h-[500px] md:h-[600px] overflow-hidden rounded-3xl bg-black/10 lg:aspect-[4/5] flex justify-start"
         >
           <Image
             src="/images/personal-trainings-hero-img.jpg"

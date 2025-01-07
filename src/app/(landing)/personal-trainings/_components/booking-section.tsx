@@ -98,7 +98,7 @@ function BookingSection() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="flex flex-col md:flex-row gap-4"
+              className="flex flex-col lg:flex-row gap-4"
             >
               <FormField
                 control={form.control}

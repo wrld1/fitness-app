@@ -62,8 +62,6 @@ async function CourseIdPage({ params }: { params: { courseId: string } }) {
     email: user.emailAddresses[0].emailAddress,
   }));
 
-  console.log(data);
-
   if (!course) {
     return redirect("/dashboard");
   }
