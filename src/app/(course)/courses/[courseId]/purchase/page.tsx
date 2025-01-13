@@ -27,8 +27,8 @@ const PurchasePage = ({ searchParams }: PurchasePageProps) => {
         <div className="space-y-2">
           <h3 className="font-medium">Реквізити для оплати:</h3>
           <div className="flex items-center gap-2">
-            <code className="bg-gray-100 p-2 rounded">4444 5555 6666 7777</code>
-            <CopyButton value="4444555566667777" />
+            <code className="bg-gray-100 p-2 rounded">4441 1110 5730 8748</code>
+            <CopyButton value="4441111057308748" />
           </div>
         </div>
 
@@ -39,7 +39,12 @@ const PurchasePage = ({ searchParams }: PurchasePageProps) => {
             <br />
             2. Надішліть його в телеграм{" "}
             <span className="font-bold">@LizaFabis</span> або на пошту
-            <span className="font-bold"> lf.body.update@gmail.com</span>
+            <span className="font-bold">
+              <a href="mailto:lf.body.update@gmail.com">
+                {" "}
+                lf.body.update@gmail.com
+              </a>
+            </span>
             <br />
             3. Після підтвердження ви отримаєте доступ до курсу
           </p>

@@ -5,6 +5,7 @@ import { Category } from "@prisma/client";
 import { FaRunning } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import { SiFuturelearn } from "react-icons/si";
+import { MdOutlineSportsGymnastics } from "react-icons/md";
 import { CategoryItem } from "./category-item";
 
 interface CategoriesProps {
@@ -14,6 +15,7 @@ interface CategoriesProps {
 const iconMap: Record<Category["name"], IconType> = {
   Барре: FaRunning,
   Стретчінг: SiFuturelearn,
+  "Функціональні тренування": MdOutlineSportsGymnastics,
 };
 
 export function Categories({ items }: CategoriesProps) {

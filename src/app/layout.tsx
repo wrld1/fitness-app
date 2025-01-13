@@ -36,6 +36,22 @@ const spectral = Spectral({
 export const metadata: Metadata = {
   title: "Body Update by Liza Fabis",
   description: "Онови своє тіло",
+  openGraph: {
+    type: "website",
+    url: "https://body-update.com.ua",
+    title: "Body Update by Liza Fabis",
+    description: "Онови своє тіло",
+    siteName: "Body Update",
+    images: [
+      {
+        url: `/logos/logo2-black.png`,
+        width: 400,
+        height: 200,
+        alt: "Logo",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
