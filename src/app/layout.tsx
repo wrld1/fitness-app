@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     siteName: "Body Update",
     images: [
       {
-        url: `/logos/logo2-black.png`,
-        width: 400,
-        height: 200,
+        url: `/logos/logo2.png`,
+        width: 300,
+        height: 100,
         alt: "Logo",
         type: "image/png",
       },
