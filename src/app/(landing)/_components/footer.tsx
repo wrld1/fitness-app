@@ -17,7 +17,7 @@ function Footer() {
         </div>
         <div className="text-center md:text-left mb-4 md:mb-0 flex flex-col gap-2">
           <a
-            href="mailto:test.mail@gmail.com"
+            href="mailto:lf.body.update@gmail.com"
             className="flex items-center gap-4"
           >
             <Mail />

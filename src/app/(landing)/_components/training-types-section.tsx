@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function TrainingTypesSection() {
   return (
     <>
-      <div className="max-w-4xl mx-auto py-12">
+      <div className="max-w-4xl mx-auto pt-12">
         <h2 className="text-center text-4xl font-bold mb-16">
           Напрямки тренувань
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid px-4 md:px-0 grid-cols-2 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center gap-2">
             <div className="rounded-lg p-2 bg-gradient-to-b from-primary to-primary/80 text-2xl">
               🧘🏼‍♀️
