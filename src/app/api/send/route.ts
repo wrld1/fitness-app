@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     const emailData: EmailData = await request.json();
 
     const { data, error } = await resend.emails.send({
-      from: "Body Update <onboarding@resend.dev>",
+      from: "Body Update <support@body-update.com.ua>",
       to: ["lf.body.update@gmail.com"],
       subject: "Новий запис на зайняття",
       react: EmailTemplate(emailData),

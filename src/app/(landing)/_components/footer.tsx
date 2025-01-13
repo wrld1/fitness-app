@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import Image from "next/image";
+import { Mail } from "lucide-react";
 
 function Footer() {
   return (
@@ -13,14 +14,22 @@ function Footer() {
             width={300}
             height={300}
           />
-          <Link href="https://www.instagram.com/fitnesspro_ua/">
-            <FaInstagram className="w-10 h-10" />
-          </Link>
         </div>
         <div className="text-center md:text-left mb-4 md:mb-0 flex flex-col gap-2">
-          <a href="mailto:test.mail@gmail.com" className="block">
+          <a
+            href="mailto:test.mail@gmail.com"
+            className="flex items-center gap-4"
+          >
+            <Mail />
             lf.body.update@gmail.com
           </a>
+          <Link
+            href="https://www.instagram.com/liza.fabis"
+            className="flex items-center gap-4"
+          >
+            <FaInstagram className="w-6 h-6" />
+            @liza.fabis
+          </Link>
         </div>
         <div className="text-center md:text-left flex flex-col gap-2">
           <Link href="/privacy-policy" className="hover:underline">
@@ -31,7 +40,7 @@ function Footer() {
           </Link>
         </div>
       </div>
-      <div className="container flex justify-center pt-4">
+      <div className="container flex justify-center pt-8">
         <p className="text-muted-foreground">
           © {new Date().getFullYear()} Всі права захищені
         </p>

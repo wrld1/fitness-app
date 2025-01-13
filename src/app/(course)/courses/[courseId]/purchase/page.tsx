@@ -21,6 +21,7 @@ const PurchasePage = ({ searchParams }: PurchasePageProps) => {
         <div className="space-y-2">
           <h2 className="text-xl font-semibold">Інформація про оплату</h2>
           <p>Вартість курсу: {formatPrice(price)}</p>
+          <p>Доступ надається на 2 місяці</p>
         </div>
 
         <div className="space-y-2">

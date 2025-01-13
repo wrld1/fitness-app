@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 interface TrainingProgram {
   id: number;
@@ -30,7 +31,9 @@ const programs: TrainingProgram[] = [
     id: 2,
     title: "Рельєф і грація",
     description: [
-      "Тебе чекає неймовірне знайомство зі світом Барре. Тут зібрані унікальні тренування створені для тих, хто прагне досягти елегантності у своїх рухах, додати витонченості та пластичності своїй фігурі, а також значно покращити її тонус і форму. Тренування спрямовані на активну роботу з м'язами всього тіла, особливо проблемними зонами, такими як живіт, стегна та сідниці. Ти вже готова до справжньої трансформації?",
+      "Тебе чекає неймовірне знайомство зі світом Барре. Тут зібрані унікальні тренування створені для тих, хто прагне досягти елегантності у своїх рухах, додати витонченості та пластичності своїй фігурі, а також значно покращити її тонус і форму.",
+      "Тренування спрямовані на активну роботу з м'язами всього тіла, особливо проблемними зонами, такими як живіт, стегна та сідниці.",
+      "Ти вже готова до справжньої трансформації?",
     ],
     image: "/images/personal-trainings-hero-img.jpg",
     published: false,
@@ -88,8 +91,13 @@ function TrainingsList() {
                 <Button
                   className="mt-8 px-6 py-3 bg-black hover:bg-black/80 border-none text-white rounded-full border transition-colors w-full lg:w-1/3 text-lg"
                   disabled={!program.published}
+                  asChild={program.published}
                 >
-                  {program.published ? "Пробний урок" : "Coming soon"}
+                  {program.published ? (
+                    <Link href="/dashboard/search">Пробний урок</Link>
+                  ) : (
+                    "Coming soon "
+                  )}
                 </Button>
               </div>
             </div>

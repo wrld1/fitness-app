@@ -87,10 +87,24 @@ function BookingSection() {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl mb-2">
-            Вартість персонального тренування:{" "}
-            <span className="font-medium">20$</span>
-          </h2>
+          <div className="text-3xl mb-2 flex items-center gap-2 flex-col md:flex-row">
+            <span>Вартість персонального тренування: </span>
+            <div className="flex items-center gap-2">
+              <span className="line-through text-gray-600"> 20$</span>
+              <span className="font-medium  relative">
+                17$
+                <span
+                  className="absolute -top-3 -right-4 
+                      bg-[#CA5B2B] text-white text-xs px-2 py-1 
+                      rounded-full animate-pulse 
+                      rotate-[20deg] origin-center
+                      hover:rotate-0 transition-transform"
+                >
+                  -15%
+                </span>
+              </span>
+            </div>
+          </div>
           <p className="text-lg mb-8">
             Зарезервуйте час консультації чи персонального тренування
           </p>
