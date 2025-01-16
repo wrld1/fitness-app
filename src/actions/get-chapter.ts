@@ -13,6 +13,8 @@ export const getChapter = async ({
   chapterId,
 }: GetChapterProps) => {
   try {
+    await deleteExpiredPurchase(userId, courseId);
+
     const purchase = await db.purchase.findUnique({
       where: {
         userId_courseId: {
@@ -105,4 +107,35 @@ export const getChapter = async ({
       purchase: null,
     };
   }
+};
+
+const deleteExpiredPurchase = async (userId: string, courseId: string) => {
+  const purchase = await db.purchase.findUnique({
+    where: {
+      userId_courseId: {
+        userId,
+        courseId,
+      },
+    },
+  });
+
+  if (purchase) {
+    const purchaseDate = new Date(purchase.createdAt);
+
+    const thresholdDate = new Date();
+    thresholdDate.setMonth(thresholdDate.getMonth() - 2);
+
+    if (purchaseDate < thresholdDate) {
+      await db.purchase.delete({
+        where: {
+          userId_courseId: {
+            userId,
+            courseId,
+          },
+        },
+      });
+      return true;
+    }
+  }
+  return false;
 };
