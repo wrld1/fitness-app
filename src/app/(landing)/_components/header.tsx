@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header
-      className="w-[95vw] md:container fixed top-2 md:top-4 left-1/2 -translate-x-1/2 z-50 mx-auto rounded-2xl border border-border/10 bg-white/80 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-white/30"
+      className="w-[95vw] xl:container fixed top-2 md:top-4 left-1/2 -translate-x-1/2 z-50 mx-auto rounded-2xl border border-border/10 bg-white/80 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-white/30"
       tabIndex={-1}
     >
       <div className="flex py-2 items-center px-4 md:px-3">

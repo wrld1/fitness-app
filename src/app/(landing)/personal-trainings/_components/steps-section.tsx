@@ -11,7 +11,7 @@ function StepsSection() {
       <div className="relative flex flex-col items-center container">
         <div className="relative z-10 flex flex-col gap-32">
           <svg
-            className="absolute left-10 md:left-6 -translate-x-1/2 h-full w-[50px]"
+            className="absolute left-10 xl:left-6 -translate-x-1/2 h-full w-[50px]"
             viewBox="0 0 50 600"
             fill="none"
             preserveAspectRatio="none"
@@ -71,7 +71,7 @@ function ProcessPoint({
   listItems: string[];
 }) {
   return (
-    <div className="flex items-start gap-6 px-4 md:px-0">
+    <div className="flex items-start gap-6 px-4 xl:px-0">
       <div className="z-20 flex items-center justify-center w-12 h-12 rounded-full bg-primary-foreground text-secondary font-medium shrink-0">
         {number}
       </div>

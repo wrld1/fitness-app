@@ -6,7 +6,7 @@ import { Mail } from "lucide-react";
 function Footer() {
   return (
     <footer className="bg-neutral-50 py-16" tabIndex={-1}>
-      <div className="container mx-auto flex flex-col items-center md:flex-row md:justify-between">
+      <div className="container mx-auto flex flex-col items-center md:flex-row md:justify-between px-4 xl:px-0">
         <div className="flex flex-col md:flex-row items-center gap-8 mb-4 md:mb-0">
           <Image
             src="/logos/logo1.png"

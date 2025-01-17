@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function TrainingsHeroSection() {
   return (
-    <section className="pt-36 lg:pt-0 px-4 bg-orangeMain text-orangeMainForeground flex flex-col items-center justify-center text-center min-h-screen ">
+    <section className="pt-36 xl:pt-0 px-4 bg-orangeMain text-orangeMainForeground flex flex-col items-center justify-center text-center min-h-screen ">
       <div className="container grid gap-8 lg:grid-cols-2 lg:gap-12">
         <BlurFade
           delay={0.25}
