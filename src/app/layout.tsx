@@ -8,6 +8,7 @@ import ToasterProvider from "@/components/providers/toaster-provider";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { ConfettiProvider } from "@/components/providers/confetti-provider";
 import { Spectral } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const spectral = Spectral({
   weight: ["400", "500", "600", "700"],
@@ -73,6 +74,7 @@ export default function RootLayout({
           <ConfettiProvider />
           <ToasterProvider />
           {children}
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
